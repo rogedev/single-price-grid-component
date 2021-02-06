@@ -1,22 +1,32 @@
 :root {
-    --main-color: hotpink;
-    --pane-padding: 5px 42px;
+    --cyan: #2ab2af;
+    --brignt-yellow: #c0df34;
+    --ligth-gray: #e5eff5;
+    --grayish-blue: #98a6bd;
+    --bg: #e6eff6;
+    --shadow: rgba(211, 211, 211, 0.7);
 }
 
 @import url(normalize.css);
 
+
+html,
 body {
-    font-family: 'Karla', sans-serif;
-    min-height: 100vh;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 1rem;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    flex-direction: column;
+    background-color: var(--bg);
+    flex-flow: row wrap;
 }
 
 .main {
+    padding: 2rem;
     flex-grow: 1;
     display: flex;
     justify-content: center;
@@ -24,8 +34,9 @@ body {
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto 2rem auto;
+
+    box-shadow: 1px 7px 20px var(--shadow);
+    max-width: 720px;
 }
 
 .card {
@@ -34,20 +45,51 @@ body {
     justify-content: center;
 }
 
+.join,
+.price,
+.why-us {
+    padding: 2rem 3rem;
+}
+
 .join {
     background-color: #fff;
     grid-area: join;
 }
 
+.join .card-header-title {
+    color: var(--cyan);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.join .card-content-title {
+    color: var(--brignt-yellow);
+    font-size: 1.3rem
+}
+
+.join .card-content-text {
+    color: var(--grayish-blue);
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.price,
+.why-us {
+    color: #fff;
+}
+
 .price {
-    background-color: #fff;
+    background-color: var(--cyan);
     grid-area: price;
 }
 
 .why-us {
-    background-color: #fff;
+    background-color: var(--grayish-blue);
     grid-area: why-us;
 }
+
+
 
 @media screen and (min-width: 640px) {
     .container {
