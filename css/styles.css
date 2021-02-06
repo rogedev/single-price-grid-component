@@ -1,0 +1,59 @@
+:root {
+    --main-color: hotpink;
+    --pane-padding: 5px 42px;
+}
+
+@import url(normalize.css);
+
+body {
+    font-family: 'Karla', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+.main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto 2rem auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.join {
+    background-color: #fff;
+    grid-area: join;
+}
+
+.price {
+    background-color: #fff;
+    grid-area: price;
+}
+
+.why-us {
+    background-color: #fff;
+    grid-area: why-us;
+}
+
+@media screen and (min-width: 640px) {
+    .container {
+        display: grid;
+        grid-template-rows: repeat(2 auto);
+        grid-template-columns: repeat(2, auto);
+        grid-template-areas: "join join""price why-us";
+    }
+}
