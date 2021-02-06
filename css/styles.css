@@ -123,7 +123,6 @@ body {
     border-radius: .5rem;
     background-color: var(--brignt-yellow);
     color: var(--white);
-    margin-bottom: 1rem;
     box-shadow: 2px 4px 15px var(--btn-shadow);
 }
 
