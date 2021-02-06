@@ -5,6 +5,7 @@
     --grayish-blue: #98a6bd;
     --bg: #e6eff6;
     --shadow: rgba(211, 211, 211, 0.7);
+    --white: #fff;
 }
 
 @import url(normalize.css);
@@ -34,7 +35,6 @@ body {
 }
 
 .container {
-
     box-shadow: 1px 7px 20px var(--shadow);
     max-width: 720px;
 }
@@ -51,19 +51,27 @@ body {
     padding: 2rem 3rem;
 }
 
+.price .card-header-title,
+.why-us .card-header-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.price,
+.why-us {
+    color: var(--white);
+}
+
 .join {
     background-color: #fff;
     grid-area: join;
 }
 
-.join .card-header-title,
-.price .card-header-title,
-.why-us .card-header-title {
+
+.join .card-header-title {
+    color: var(--cyan);
     font-size: 2rem;
     font-weight: 700;
-}
-.join .card-header-title{
-    color: var(--cyan);
 }
 
 .join .card-content-title {
@@ -78,15 +86,28 @@ body {
     line-height: 1.5;
 }
 
-.price,
-.why-us {
-    color: #fff;
-}
 
 .price {
     background-color: var(--cyan);
     grid-area: price;
 }
+
+.price .card-content-button {
+
+    margin: 2rem auto 0 auto;
+    padding: 1.5rem;
+    text-align: center;
+
+
+    display: block;
+    outline: none;
+    text-decoration: none;
+    border-radius: .5rem;
+    background-color: var(--brignt-yellow);
+    color: #fff;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
 
 .why-us {
     background-color: var(--grayish-blue);
