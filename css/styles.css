@@ -1,15 +1,19 @@
 :root {
     --cyan: #2ab2af;
     --brignt-yellow: #c0df34;
+
     --ligth-gray: #e5eff5;
-    --grayish-blue: #98a6bd;
+    --grayish-blue: #4abebd;
+
+
     --bg: #e6eff6;
-    --shadow: rgba(211, 211, 211, 0.7);
     --white: #fff;
+
+    --shadow: rgba(211, 211, 211, 0.7);
+    --btn-shadow: rgba(0, 0, 0, 0.4);
 }
 
 @import url(normalize.css);
-
 
 html,
 body {
@@ -17,6 +21,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 400;
 }
 
 body {
@@ -48,7 +53,7 @@ body {
 .join,
 .price,
 .why-us {
-    padding: 2rem 3rem;
+    padding: 2rem;
 }
 
 .price .card-header-title,
@@ -63,8 +68,18 @@ body {
 }
 
 .join {
-    background-color: #fff;
+    background-color: var(--white);
     grid-area: join;
+}
+
+.price {
+    background-color: var(--cyan);
+    grid-area: price;
+}
+
+.why-us {
+    background-color: var(--grayish-blue);
+    grid-area: why-us;
 }
 
 
@@ -83,37 +98,46 @@ body {
 .join .card-content-text {
     color: var(--grayish-blue);
     font-size: 1.1rem;
+    ;
     line-height: 1.5;
 }
 
 
-.price {
-    background-color: var(--cyan);
-    grid-area: price;
+.price .card-content-price {
+    margin: 0;
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+.card-content-price span {
+    color: var(--white);
+    font-size: 1.1rem;
 }
 
 .price .card-content-button {
-
     margin: 2rem auto 0 auto;
-    padding: 1.5rem;
+    padding: 1.2rem;
     text-align: center;
-
-
     display: block;
     outline: none;
     text-decoration: none;
     border-radius: .5rem;
     background-color: var(--brignt-yellow);
-    color: #fff;
-    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4);
+    color: var(--white);
+    margin-bottom: 1rem;
+    box-shadow: 2px 4px 15px var(--btn-shadow);
 }
 
-
-.why-us {
-    background-color: var(--grayish-blue);
-    grid-area: why-us;
+.why-us .card-header {
+    position: relative;
+    top: -1.2rem;
 }
 
+.why-us .card-content-list {
+    font-size: 1.1rem;
+    ;
+    list-style-type: none;
+}
 
 
 @media screen and (min-width: 640px) {
