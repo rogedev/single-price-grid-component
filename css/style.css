@@ -1,0 +1,43 @@
+@import url("normalize.css");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+/*globals*/
+html, html body { height: 100%; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+html body { font-family: 'Karla', sans-serif; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; background-color: #e6eff6; -ms-flex-flow: row wrap; flex-flow: row wrap; font-weight: 400; }
+
+/* layout*/
+.main { padding: 2rem; -webkit-box-flex: 1; -ms-flex-positive: 1; flex-grow: 1; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.main .container { -webkit-box-shadow: 1px 7px 20px rgba(211, 211, 211, 0.7); box-shadow: 1px 7px 20px rgba(211, 211, 211, 0.7); max-width: 720px; }
+
+@media screen and (min-width: 640px) { .main .container { display: -ms-grid; display: grid; -ms-grid-rows: (auto)[2]; grid-template-rows: repeat(2 auto); -ms-grid-columns: (50%)[2]; grid-template-columns: repeat(2, 50%); grid-template-areas: "join join" "subscription why-us"; } }
+
+/*card*/
+.card { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding: 2rem; color: #fff; }
+
+.join { background-color: #fff; grid-area: join; line-height: 1.5; }
+
+.join .title { color: #2ab2af; font-size: 2rem; font-weight: 700; }
+
+.join .subtitle { margin-top: 0; color: #c0df34; font-size: 1.3rem; }
+
+.join .text { color: #4abebd; font-size: 1.1rem; line-height: 1.5; }
+
+.subscription { background-color: #2ab2af; grid-area: subscription; }
+
+.subscription .title { font-size: 1.5rem; font-weight: 700; }
+
+.subscription .price { margin: 0; font-size: 2.7rem; font-weight: 700; }
+
+.subscription .price span { font-size: 1.1rem; }
+
+.subscription .sign-up { margin: 2rem auto 0 auto; padding: 1.2rem; text-align: center; display: block; outline: none; text-decoration: none; border-radius: .5rem; background-color: #c0df34; color: #fff; -webkit-box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4); box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.4); }
+
+.why-us { background-color: #4abebd; grid-area: why-us; }
+
+.why-us .title { font-size: 1.5rem; font-weight: 700; }
+
+.why-us .list { padding: 0; }
+
+.why-us .list li { list-style-type: none; margin-top: 0.2rem; }
+/*# sourceMappingURL=style.css.map */

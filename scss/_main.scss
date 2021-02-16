@@ -1,0 +1,132 @@
+/*globals*/
+html {
+
+    &,
+    body {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body {
+        font-family: 'Karla', sans-serif;
+        flex-direction: column;
+        background-color: $bg;
+        flex-flow: row wrap;
+        font-weight: 400;
+    }
+}
+
+/* layout*/
+.main {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .container {
+        box-shadow: 1px 7px 20px $shadow;
+        max-width: 720px;
+
+        @media screen and (min-width: 640px) {
+
+            display: grid;
+            grid-template-rows: repeat(2 auto);
+            grid-template-columns: repeat(2, 50%);
+            grid-template-areas: "join join""subscription why-us";
+        }
+
+    }
+}
+
+/*card*/
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    color: $white;
+}
+
+@mixin secondarytypo {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.join {
+    background-color: $white;
+    grid-area: join;
+    line-height: 1.5;
+
+
+    .title {
+        color: $cyan;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .subtitle {
+        margin-top: 0;
+        color: $brignt-yellow;
+        font-size: 1.3rem
+    }
+
+    .text {
+        color: $grayish-blue;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+}
+
+.subscription {
+    background-color: $cyan;
+    grid-area: subscription;
+
+    .title {
+        @include secondarytypo();
+    }
+
+    .price {
+        margin: 0;
+        font-size: 2.7rem;
+        font-weight: 700;
+
+        span {
+            font-size: 1.1rem;
+        }
+    }
+
+    .sign-up {
+        margin: 2rem auto 0 auto;
+        padding: 1.2rem;
+        text-align: center;
+        display: block;
+        outline: none;
+        text-decoration: none;
+        border-radius: .5rem;
+        background-color: $brignt-yellow;
+        color: $white;
+        box-shadow: 2px 4px 15px $btn-shadow;
+    }
+}
+
+
+.why-us {
+    background-color: $grayish-blue;
+    grid-area: why-us;
+
+    .title {
+        @include secondarytypo();
+    }
+
+    .list {
+        padding: 0;
+
+        li {
+            list-style-type: none;
+            margin-top: 0.2rem;
+        }
+    }
+}

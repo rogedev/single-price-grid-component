@@ -82,6 +82,14 @@ body {
     grid-area: why-us;
 }
 
+.why-us .card-content ul {
+    padding: 0;
+}
+
+.why-us .card-content>ul>li {
+    list-style-type: none;
+}
+
 
 .join .card-header-title {
     color: var(--cyan);
@@ -131,6 +139,6 @@ body {
         display: grid;
         grid-template-rows: repeat(2 auto);
         grid-template-columns: repeat(2, 50%);
-        grid-template-areas: "join join""price why-us";
+        grid-template-areas: "join join""subscription why-us";
     }
 }
